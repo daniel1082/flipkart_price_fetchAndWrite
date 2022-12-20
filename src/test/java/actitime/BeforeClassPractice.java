@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -17,7 +18,7 @@ public class BeforeClassPractice {
 	
 @Parameters({"usernames", "password"})
 @BeforeMethod
-public void befrMethod(String usernames,String password)
+public void befrMethod(@Optional("admin")String usernames, @Optional("manager")String password)
 {
 	Reporter.log("befor method==>", true);
 	WebDriverManager.chromedriver().setup();
