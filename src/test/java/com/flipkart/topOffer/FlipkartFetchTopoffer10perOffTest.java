@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
 
 import com.flipkart.TopOfferRep.topOfferPage;
 import com.flipkart.genericUtility.ConstantUtility;
@@ -12,8 +13,9 @@ import com.flipkart.genericUtility.PropertiesUtility;
 import com.flipkart.genericUtility.PropertyFileKeys;
 import com.flipkart.genericUtility.WebDriverUtility;
 
-public class FlipkartFetchTopoffer10perOff {
-	public static void main(String[] args) throws EncryptedDocumentException, IOException{
+public class FlipkartFetchTopoffer10perOffTest {
+	@Test
+	public static void fetchPrice() throws EncryptedDocumentException, IOException{
 		
 		WebDriverUtility webdriver = new WebDriverUtility();
 		PropertiesUtility prop= new PropertiesUtility();
