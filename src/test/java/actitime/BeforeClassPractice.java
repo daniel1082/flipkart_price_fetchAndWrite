@@ -18,7 +18,7 @@ public class BeforeClassPractice {
 	
 @Parameters({"usernames", "password"})
 @BeforeMethod
-public void befrMethod(@Optional("admin")String usernames, @Optional("manager")String password)
+public void befrMethod(String usernames, String password)
 {
 	Reporter.log("befor method==>", true);
 	WebDriverManager.chromedriver().setup();

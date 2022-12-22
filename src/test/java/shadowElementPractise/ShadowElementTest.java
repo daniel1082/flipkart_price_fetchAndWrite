@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ShadowElementTest {
-	@Test
+	@Test(enabled = false)
 	public void findTheShadow() throws InterruptedException
 	{
 		WebDriverManager.chromedriver().setup();
@@ -18,8 +18,9 @@ public class ShadowElementTest {
 		driver.get("https://shop.polymer-project.org/");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement ele = (WebElement)js.executeScript("return document.querySelector(\"body > shop-app\").shadowRoot.querySelector(\"#tabContainer > shop-tabs > shop-tab:nth-child(3) > a\")");
-	   Thread.sleep(2000);
+		Thread.sleep(2000);
 		ele.click();
+		driver.quit();
 	}
 
 }
